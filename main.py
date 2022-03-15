@@ -27,8 +27,9 @@ print(logo)
 score=0
 right_answer=True
 first_selected_star=[]
+second_star_account=random.choice(data)
 while right_answer:
-  first_star_account=random.choice(data)
+  first_star_account=second_star_account
   second_star_account=random.choice(data)
   if first_star_account==second_star_account:
     second_star_account=random.choice(data)
