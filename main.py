@@ -6,11 +6,15 @@ from game_data import data
 #randomly choose two super stars from the list
 #ask the user to guess
 #Write a function to compare
-def check_answer(guess,a_followers):
-  
+
+def check_answer(guess,a_followers,b_followers):
+  if a_followers>b_followers:
+    return guess=="a"
+  else:
+    return guess=="b"
+      
 #loop until you get it wrong
 #count the score
-#give the feedback
 #making account at position B
 def format_data(account):
   #get the format of the star name into printable format
@@ -20,6 +24,7 @@ def format_data(account):
   return f"{account_name} a {account_description}, from {account_country}"
 #clear the creen between rounds
 print(logo)
+score=0
 right_answer=True
 first_selected_star=[]
 while right_answer:
@@ -34,6 +39,13 @@ while right_answer:
   print(vs)
   print(f" Compare B: {format_data(second_star_account)}")
   guess=input("Who has more followers? Type 'A' or 'B': ").lower()
-  account_follower=account["follower_count"]
-  right_answer=False
+  a_followers=first_star_account["follower_count"]
+  b_followers=second_star_account["follower_count"]
+  is_correct=check_answer(guess,a_followers,b_followers)
+  #give the feedback
+  if is_correct:
+    print("You got it!")
+    score+=1
+  else:
+    print(f"Sorry that's wrong. Your final score is {score}")
   
