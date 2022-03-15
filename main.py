@@ -9,11 +9,16 @@ from game_data import data
 #loop until you get it wrong
 #count the score
 #give the feedback
+#making account at position B
+
+#clear the creen between rounds
 print(logo)
 right_answer=True
 first_selected_star=[]
 while right_answer:
-  first_star=random.choice(data)
+  first_star_account=random.choice(data)
+  second_star_account=random.choice(data)
+  if first_star=
   for first in first_star:
     
   print(first_star)
