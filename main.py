@@ -1,6 +1,7 @@
 import random
 from art import logo,vs
 from game_data import data
+from replit import clear 
 
 #displaying the logo
 #randomly choose two super stars from the list
@@ -43,9 +44,13 @@ while right_answer:
   a_followers=first_star_account["follower_count"]
   b_followers=second_star_account["follower_count"]
   is_correct=check_answer(guess,a_followers,b_followers)
+
+  #clear the screen
+  clear()
+  print(logo)
   #give the feedback
   if is_correct:
-    print("You are right!, you got it!")
+    print(f"You are right!, your current score is {score}")
     score+=1
   else:
     print(f"Sorry that's wrong. Your final score is {score}")
