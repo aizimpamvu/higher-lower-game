@@ -44,7 +44,7 @@ while right_answer:
   is_correct=check_answer(guess,a_followers,b_followers)
   #give the feedback
   if is_correct:
-    print("You got it!")
+    print("You are right!, you got it!")
     score+=1
   else:
     print(f"Sorry that's wrong. Your final score is {score}")
