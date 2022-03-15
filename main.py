@@ -48,4 +48,5 @@ while right_answer:
     score+=1
   else:
     print(f"Sorry that's wrong. Your final score is {score}")
+    right_answer=False
   
